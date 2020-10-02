@@ -23,8 +23,8 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-gradle-
       - run: ./gradlew clean test -Pbuild=dev
-      - run: find / -type d
-      - run: "find / -name '*.apk'"
+      - run: find . -type d
+      - run: "find . -name '*.apk'"
       - name: Upload APK
         uses: actions/upload-artifact@v2
         with:
